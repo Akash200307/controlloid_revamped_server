@@ -1,7 +1,7 @@
-[DOWNLOAD](https://github.com/experiment322/controlloid-server/archive/master.zip)
+
 
 # controlloid-server
-This is the server for the [Controlloid](https://github.com/experiment322/controlloid-client) application.
+This is the server for the [Controlloid](https://github.com/Akash200307/controlloid_revamped_client) application.
 
 ## Windows instructions
 * Go into `/dist/windows/` folder and run `start.bat`
