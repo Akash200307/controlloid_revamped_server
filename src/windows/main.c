@@ -30,6 +30,9 @@ static const struct controller_event REGISTERED_EVENTS[] = {
         {.type=BUTTON, .code=5, .name="L2"},
         {.type=BUTTON, .code=8, .name="R1"},
         {.type=BUTTON, .code=6, .name="R2"},
+        // analog stick click buttons
+        {.type=BUTTON, .code=11, .name="L3"},
+        {.type=BUTTON, .code=12, .name="R3"},
         // action pad buttons
         {.type=BUTTON, .code=1, .name="TRIANGLE"},
         {.type=BUTTON, .code=3, .name="CROSS"},
@@ -57,7 +60,7 @@ static unsigned int get_vjoy_device() {
             GetVJDAxisExist(i, HID_USAGE_Y) > 0 &&
             GetVJDAxisExist(i, HID_USAGE_RX) > 0 &&
             GetVJDAxisExist(i, HID_USAGE_RY) > 0 &&
-            GetVJDButtonNumber(i) >= 16) {
+            GetVJDButtonNumber(i) >= 18) {
             return i;
         }
     }
@@ -79,7 +82,7 @@ static int vjoy_configuration_ok() {
 
     unsigned int vjd_id = get_vjoy_device();
     if (!vjd_id) {
-        fprintf(stderr, "error: no vjoy device available or none with valid configuration (16 BTN, X, Y, RX, RY)\n");
+        fprintf(stderr, "error: no vjoy device available or none with valid configuration (18 BTN, X, Y, RX, RY)\n");
         return 0;
     }
 

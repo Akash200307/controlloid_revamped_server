@@ -26,6 +26,9 @@ static const struct controller_event REGISTERED_EVENTS[] = {
         {.type=EV_KEY, .code=BTN_TL2, .name="L2"},
         {.type=EV_KEY, .code=BTN_TR, .name="R1"},
         {.type=EV_KEY, .code=BTN_TR2, .name="R2"},
+        // analog stick click buttons
+        {.type=EV_KEY, .code=BTN_THUMBL, .name="L3"},
+        {.type=EV_KEY, .code=BTN_THUMBR, .name="R3"},
         // action pad buttons
         {.type=EV_KEY, .code=BTN_NORTH, .name="TRIANGLE"},
         {.type=EV_KEY, .code=BTN_SOUTH, .name="CROSS"},

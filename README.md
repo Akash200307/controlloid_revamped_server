@@ -3,7 +3,7 @@
 # controlloid-server
 This is the server for the [Controlloid](https://github.com/experiment322/controlloid-client) application.
 
-## Windoze instructions
+## Windows instructions
 * Go into `/dist/windows/` folder and run `start.bat`
 * On first run it will install and configure required software ([vJoy](https://sourceforge.net/projects/vjoystick/))
 * This takes a while and you should accept all the prompts for a successful install
@@ -12,7 +12,16 @@ This is the server for the [Controlloid](https://github.com/experiment322/contro
 * Pick one in the same network as your phone and write it exactly in the application
 * Alternatively, scan available servers in the application and pick one (should be only one)
 * Done!
+* Done!
 
+## Build Instructions (Linux)
+The server comes with pre-built binaries, but if you need to rebuild (e.g., for L3/R3 support):
+
+1. Install dependencies:
+   - Fedora/RHEL: `sudo dnf install libevdev-devel`
+   - Debian/Ubuntu: `sudo apt-get install libevdev-dev`
+2. Run `make linux` in the root directory
+3. The binary will be created at `dist/linux/bin/ws_handler`
 ## Linux instructions
 ##### A note about the `uinput` kernel module
 * The server uses the `uinput` kernel module to emulate real input
